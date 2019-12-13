@@ -13,4 +13,13 @@ class Api::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end  
+
+  def update
+    if current_user.id == params[:id]
+      user = current_user
+      p user
+    else
+      render json: "Unauthorized to update user info.", status: :unauthorized
+    end
+  end
 end
