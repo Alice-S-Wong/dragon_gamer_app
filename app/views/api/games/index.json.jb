@@ -14,6 +14,7 @@
     review: game.reviews.map do |review|
       {
         user: review.user.username,
+        rating: review.rating,
         review: review.review
       }
     end

@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     # patch "/users/:id" => "users#update"
     post "/sessions" => "sessions#create"
     get "/games" => "games#index"
+    get "/games/:id" => "games#show"
+    get "/lists/:id" => "lists#show"
   end
 end
