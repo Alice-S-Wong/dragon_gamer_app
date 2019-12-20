@@ -7,4 +7,11 @@ class Game < ApplicationRecord
   has_many :game_genres
   has_many :genres, through: :game_genres
   has_many :videos
+  def average_rating
+    ratings = []
+    self.reviews.each do |review|
+      ratings << review[:rating]
+    end
+    return ratings.sum / ratings.length
+  end
 end

@@ -1,0 +1,21 @@
+@games.map do |game| 
+  {
+    id: game.id,
+    title: game.title,
+    description: game.description,
+    release_year: game.release_year,
+    cumulative_rating: game.average_rating,
+    genre: game.genres.map do |genre|
+      {genre: genre.name}
+    end,
+    platform: game.platforms.map do |platform|
+      {platform: platform.name}
+    end,
+    review: game.reviews.map do |review|
+      {
+        user: review.user.username,
+        review: review.review
+      }
+    end
+  }
+end

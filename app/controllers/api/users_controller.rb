@@ -14,12 +14,12 @@ class Api::UsersController < ApplicationController
     end
   end  
 
-  def update
-    if current_user.id == params[:id]
-      user = current_user
-      p user
-    else
-      render json: "Unauthorized to update user info.", status: :unauthorized
-    end
-  end
+  # def update
+  #   if current_user.id == params[:id]
+  #     user = current_user
+  #     p user
+  #   else
+  #     render json: "Unauthorized to update user info.", status: :unauthorized
+  #   end
+  # end
 end
