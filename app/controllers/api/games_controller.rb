@@ -1,5 +1,8 @@
 class Api::GamesController < ApplicationController
   def index
+    # p "*" * 50
+    # p current_user
+    # p "*" * 50
     @games = Game.all
     render "index.json.jb"
   end
