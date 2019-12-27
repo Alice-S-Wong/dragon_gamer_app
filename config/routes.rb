@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
     get "/games" => "games#index"
     get "/games/:id" => "games#show"
+    get "/lists" => "lists#index"
     post "/lists" => "lists#create"
     get "/lists/:id" => "lists#show"
     post "/list_items" => "list_items#create"

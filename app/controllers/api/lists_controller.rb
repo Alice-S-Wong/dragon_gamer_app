@@ -1,4 +1,9 @@
 class Api::ListsController < ApplicationController
+  def index
+    @lists = List.where(visibility: "public")
+    render "index.json.jb"
+  end
+
   def create
     if current_user
       @list = List.new(
