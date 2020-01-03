@@ -3,7 +3,10 @@
   user: @list.user.username,
   list_type: @list.list_type,
   visibility: @list.visibility,
-  games: @list.games.map do |game|
-    {game: game.title}
+  games: @list.list_items.map do |list_item|
+    {
+      game: list_item.game.title,
+      id: list_item.id
+    }
   end
 }
