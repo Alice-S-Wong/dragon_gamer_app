@@ -12,6 +12,10 @@ class Game < ApplicationRecord
     self.reviews.each do |review|
       ratings << review[:rating]
     end
-    return ratings.sum / ratings.length
+    if ratings.length != 0
+      return ratings.sum / ratings.length
+    else
+      return
+    end
   end
 end

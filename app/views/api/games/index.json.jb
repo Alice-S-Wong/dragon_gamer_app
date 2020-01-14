@@ -1,3 +1,13 @@
+# @games.map do |game|
+#   {
+#     id: game["id"],
+#     title: game["name"],
+#     description: game["summary"],
+#     rating: game["rating"],
+#     genre: game["genres"],
+#     platforms: game["platforms"]
+#   }
+# end
 @games.map do |game| 
   {
     id: game.id,
