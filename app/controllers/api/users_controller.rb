@@ -14,6 +14,13 @@ class Api::UsersController < ApplicationController
     end
   end  
 
+  def show
+    if current_user
+      @user = User.find_by(id: current_user.id)
+      render "show.json.jb"
+    end
+  end
+
   # def update
   #   if current_user.id == params[:id]
   #     user = current_user
