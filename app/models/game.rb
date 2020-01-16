@@ -7,6 +7,7 @@ class Game < ApplicationRecord
   has_many :game_genres
   has_many :genres, through: :game_genres
   has_many :videos
+  has_many :release_dates
   def average_rating
     ratings = []
     self.reviews.each do |review|

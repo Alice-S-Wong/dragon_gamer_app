@@ -4,7 +4,7 @@
     description: @game.description,
     release_year: @game.release_year,
     cumulative_rating: @game.average_rating,
-    image_url: game.image_url,
+    image_url: @game.image_url,
     genre: @game.genres.map do |genre|
       {genre: genre.name}
     end,
@@ -17,5 +17,8 @@
         rating: review.rating,
         review: review.review
       }
+    end,
+    release_dates: @game.release_dates.map do |date|
+      {date: date.date}
     end
   }
