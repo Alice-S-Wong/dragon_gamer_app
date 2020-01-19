@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     post "/list_items" => "list_items#create"
     delete "/list_items/:id" => "list_items#destroy"
     post "/reviews" => "reviews#create"
+    get "/pokemons" => "pokemons#show"
   end
 end

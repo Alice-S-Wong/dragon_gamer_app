@@ -1,0 +1,8 @@
+{
+  hp: @stats_array[5],
+  attack: @stats_array[4],
+  defense: @stats_array[3],
+  special_attack: @stats_array[2],
+  special_defense: @stats_array[1],
+  speed: @stats_array[0],
+}
