@@ -1,0 +1,11 @@
+@lists.map do |list|
+  {
+    id: list.id,
+    user: list.user.username,
+    list_type: list.list_type,
+    visibility: list.visibility,
+    games: list.games.map do |game|
+      {game: game.title}
+    end
+  }
+end

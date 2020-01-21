@@ -4,6 +4,14 @@ class Api::ListsController < ApplicationController
     render "index.json.jb"
   end
 
+  def private
+    if current_user
+      user = User.find_by(id: current_user.id)
+      @lists = List.where(user_id: user.id, visibility: "private")
+      render "private.json.jb"
+    end
+  end
+
   def create
     if current_user
       @list = List.new(

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get "/games" => "games#index"
     get "/games/:id" => "games#show"
     get "/lists" => "lists#index"
+    get "/lists/private" => "lists#private"
     post "/lists" => "lists#create"
     get "/lists/:id" => "lists#show"
     post "/list_items" => "list_items#create"
